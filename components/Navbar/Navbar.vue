@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="teal">
+        <nav>
             <div class="nav-wrapper container">
                 <nuxt-link to="/" class="brand-logo">DevMeetup</nuxt-link>
                 
