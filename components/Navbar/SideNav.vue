@@ -14,12 +14,27 @@
             <li><div class="divider"></div></li>
             <li><a class="subheader">Subheader</a></li>
             <li><a class="waves-effect" @click.prevent="closeSideNav">Third Link With Waves</a></li>
+
+            <li
+                v-for="item in menuItems"
+                :key="item.title"
+            >
+                <a href="#" @click.prevent="closeSideNav">
+                    <i class="material-icons left">{{ item.icon }}</i> {{ item.title }}
+                </a>
+            </li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
+  props: {
+    menuItems: {
+      type: Array,
+      required: true
+    }
+  },
   mounted() {
     $('.button-collapse').sideNav()
   },
