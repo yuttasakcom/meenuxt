@@ -16,7 +16,7 @@
                         :to="item.to"
                     >
                         <a>
-                            <i class="material-icons left">{{ item.icon }}</i> {{ item.title }}
+                            <i class="material-icons left">{{ item.icon }}</i>{{ item.title }}
                         </a>
                     </nuxt-link>
                 </ul>
@@ -36,11 +36,11 @@ export default {
   data() {
     return {
       menuItems: [
-        { icon: 'supervisor_account', title: 'View Meetups', to: '/' },
-        { icon: 'room', title: 'Organize Meetup', to: '/' },
-        { icon: 'person', title: 'Profile', to: '/' },
-        { icon: 'face', title: 'Sign up', to: '/' },
-        { icon: 'lock_open', title: 'Sign in', to: '/' }
+        { icon: 'supervisor_account', title: 'View Meetups', to: '/meetups' },
+        { icon: 'room', title: 'Organize Meetup', to: '/meetups/new' },
+        { icon: 'person', title: 'Profile', to: '/users/profile' },
+        { icon: 'face', title: 'Sign up', to: '/users/signup' },
+        { icon: 'lock_open', title: 'Sign in', to: '/users/signin' }
       ]
     }
   }

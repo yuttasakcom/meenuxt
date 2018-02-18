@@ -19,7 +19,7 @@
                 v-for="item in menuItems"
                 :key="item.title"
             >
-                <a href="#" @click.prevent="closeSideNav">
+                <a @click.prevent="closeSideNav(item.to)">
                     <i class="material-icons left">{{ item.icon }}</i> {{ item.title }}
                 </a>
             </li>
@@ -39,8 +39,9 @@ export default {
     $('.button-collapse').sideNav()
   },
   methods: {
-    closeSideNav() {
+    closeSideNav(link) {
       $('.button-collapse').sideNav('hide')
+      this.$router.push(link)
     }
   }
 }
